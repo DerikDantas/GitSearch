@@ -9,45 +9,23 @@ const animationBox = keyframes`
 export const Container = styled.div`
   height: 100vh;
   position: relative;
+  display: grid;
+  place-items: center;
   background-color: ${colors.primary};
 `;
 
-export const VectorOne = styled.img`
-  position: absolute;
-  left: -4.72%;
-  right: 85.66%;
-  top: 9.76%;
-  bottom: 27.02%;
-  width: 10%;
-`;
-
-export const VectorTwo = styled.img`
-  position: absolute;
-  left: 10.32%;
-  right: 68.44%;
-  top: 9.76%;
-  bottom: 9.76%;
-  width: 15%;
-`;
-
-export const VectorThree = styled.img`
-  position: absolute;
-  left: 29.55%;
-  right: 51.39%;
-  top: 9.76%;
-  bottom: 27.02%;
-  width: 10%;
-`;
-
 export const BoxSearch = styled.div`
-  position: absolute;
-  left: 820px;
-  top: 265px;
+  opacity: 0;
   animation-name: ${animationBox};
   animation-duration: 1.5s;
   animation-delay: 800ms;
   animation-fill-mode: forwards;
   transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+`;
+
+export const Title = styled.h1`
+  color: ${colors.titles};
+  text-align: center;
 `;
 
 export const WellcomeTitle = styled.div`

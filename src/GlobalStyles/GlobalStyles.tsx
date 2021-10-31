@@ -18,4 +18,16 @@ export const GloabalStyles = createGlobalStyle`
     :focus-visible {
         outline: none;
     }
+
+    .scroll-1::-webkit-scrollbar{
+        width: 8px;
+    }
+    .scroll-1::-webkit-scrollbar-thumb{
+        border-radius: 20px;
+        background: #ddd;
+    }
+    .scroll-1::-webkit-scrollbar{
+        width: 8px;
+        height: 8px;
+    }
 `;

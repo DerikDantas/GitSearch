@@ -5,30 +5,25 @@ import {
   Input,
   Row,
   SubTitle,
-  VectorOne,
-  VectorThree,
-  VectorTwo,
+  Title,
   WellcomeTitle,
 } from "./styles";
-import imgVector from "../../assets/images/Vectors/Vector.png";
 import { BsArrowRight } from "react-icons/bs";
 import { colors } from "../../assets/colors/colors";
 import React, { useContext, useState } from "react";
 import { GlobalContext } from "../../context/GlobalContext";
+import ErrorText from "../../components/ErrorText/ErrorText";
 
 const Search: React.FC = () => {
-  const { searchUser } = useContext(GlobalContext);
+  const { searchUser, error } = useContext(GlobalContext);
   const [selectUser, setSelectUser] = useState("");
 
   return (
     <Container>
-      <VectorOne src={imgVector} />
-      <VectorTwo src={imgVector} />
-      <VectorThree src={imgVector} />
-
       <BoxSearch>
+        <Title>Git Search</Title>
         <WellcomeTitle>Bem-vindo</WellcomeTitle>
-        <SubTitle>Pesquise um usuário para ver o perfil</SubTitle>
+        <SubTitle>Pesquise um usuário git para ver o perfil</SubTitle>
         <Row>
           <Input
             value={selectUser}
@@ -43,6 +38,7 @@ const Search: React.FC = () => {
             <BsArrowRight size={30} color={colors.white} />
           </ButtonSearch>
         </Row>
+        <ErrorText error={error} />
       </BoxSearch>
     </Container>
   );

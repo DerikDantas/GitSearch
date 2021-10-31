@@ -37,8 +37,3 @@ Rodar projeto
 ```console
 $ npm start
 ```
-
-## Para Rodar os Testes
-```console
-$ npm test
-```
