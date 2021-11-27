@@ -16,7 +16,7 @@ import ErrorText from "../../components/ErrorText/ErrorText";
 
 const Search: React.FC = () => {
   const { searchUser, error } = useContext(GlobalContext);
-  const [selectUser, setSelectUser] = useState("");
+  const [selectUser, setSelectUser] = useState<string>("");
 
   return (
     <Container>

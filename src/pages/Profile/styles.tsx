@@ -1,6 +1,10 @@
 import styled, { keyframes } from "styled-components";
 import { colors } from "../../assets/colors/colors";
 
+interface Props {
+  open: boolean;
+}
+
 const animacaoBG = keyframes`
     0% { width: 0 }
     100% { width:  100% }
@@ -20,24 +24,46 @@ export const Container = styled.div`
   animation-duration: 1s;
   animation-fill-mode: forwards;
   transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+
+  @media (max-width: 768px) {
+    height: 100%;
+    padding: 10px;
+    display: block;
+  }
 `;
 
 export const RowBox = styled.div`
   display: flex;
   justify-content: center;
   width: 100%;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    flex-direction: column;
+    height: 100%;
+  }
 `;
 
-export const BoxRepositorys = styled.div`
+export const BoxRepositorys = styled.div<Props>`
   background-color: ${colors.primary};
   position: relative;
   left: -10px;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   height: 500px;
+  display: ${(props) => (props.open ? "block" : "none")};
+  width: 50%;
+  padding: 20px;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    border-radius: 15px;
+    left: 0px;
+    overflow-x: hidden;
+  }
 `;
 
-export const CloseButton = styled.button`
+export const CloseButton = styled.button<Props>`
   background-color: ${colors.background};
   width: 50px;
   height: 50px;
@@ -50,12 +76,13 @@ export const CloseButton = styled.button`
   position: absolute;
   top: 13px;
   right: 13px;
+  display: ${(props) => (props.open ? "block" : "none")};
   &:hover {
     box-shadow: 0px 0px 10px ${colors.secondary};
   }
 `;
 
-export const BoxProfile = styled.div`
+export const BoxProfile = styled.div<Props>`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -63,7 +90,7 @@ export const BoxProfile = styled.div`
   background: ${colors.white};
   border-radius: 15px;
   padding: 20px;
-  width: 50%;
+  width: ${(props) => (props.open ? "25%" : "50%")};
   height: 500px;
   opacity: 0;
   overflow-y: auto;
@@ -74,6 +101,11 @@ export const BoxProfile = styled.div`
   animation-delay: 800ms;
   animation-fill-mode: forwards;
   transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+
+  @media (max-width: 768px) {
+    width: 100%;
+    padding: 15px;
+  }
 `;
 
 export const ProfileImg = styled.img`
@@ -83,6 +115,11 @@ export const ProfileImg = styled.img`
   border: 3px solid ${colors.primary};
   padding: 3px;
   box-shadow: 0px 0px 10px ${colors.secondary};
+
+  @media (max-width: 768px) {
+    width: 125px;
+    height: 125px;
+  }
 `;
 
 export const Name = styled.h1`
@@ -114,6 +151,12 @@ export const CardInfos = styled.div`
 
   p {
     color: ${colors.text};
+  }
+
+  @media (max-width: 768px) {
+    &:nth-child(3) {
+      margin-top: 15px;
+    }
   }
 `;
 

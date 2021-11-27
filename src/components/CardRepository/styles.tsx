@@ -17,6 +17,7 @@ export const Title = styled.h1`
   font-weight: bold;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 
   span {
     padding: 5px 18px;
@@ -31,6 +32,12 @@ export const Description = styled.p`
   color: ${colors.text};
   margin-top: 5px;
   font-size: 14px;
+
+  @media (max-width: 768px) {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 `;
 
 export const Row = styled.div`

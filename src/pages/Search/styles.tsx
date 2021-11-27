@@ -70,6 +70,11 @@ export const Input = styled.input`
   &::-ms-input-placeholder {
     color: ${colors.blueText};
   }
+
+  @media(max-width: 768px) {
+    width: 100%;
+    height: 70px;
+  }
 `;
 
 export const ButtonSearch = styled.button`
@@ -84,5 +89,10 @@ export const ButtonSearch = styled.button`
   cursor: pointer;
   &:hover {
     opacity: 0.5;
+  }
+
+  @media(max-width: 768px) {
+    width: 100px;
+    height: 70px;
   }
 `;

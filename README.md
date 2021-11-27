@@ -6,6 +6,11 @@
   <a href="#-instalação">Instalação</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </p>
 
+<br>
+
+<p align="center">
+  <img alt="Happy" src="./src/assets/images/mockup.png" width="100%">
+</p>
 
 ## 🚀 Tecnologias
 Esse projeto foi desenvolvido com as seguintes tecnologias:
@@ -14,6 +19,9 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
   <li>ReactJS</li>
   <li>TypeScript</li>
   <li>Styled-Components</li>
+  <li>Axios</li>
+  <li>Moment</li>
+  <li>Sweet Alert</li>
 </ul>
 
 ## 💻 Projeto

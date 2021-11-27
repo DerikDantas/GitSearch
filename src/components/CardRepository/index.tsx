@@ -24,11 +24,15 @@ const CardRepository: React.FC<IProps> = ({
       <Title>
         {name} <span>{visibility}</span>
       </Title>
-      <Description>{description}</Description>
+      <Description>{description || "Não informado"}</Description>
       <Row>
-        <TextInfo>{language || 'Não informado'}</TextInfo>
-        <TextInfo><b>|</b></TextInfo>
-        <TextInfo>{moment(created_at).locale('pt-br').format('DD/MM/YYYY')}</TextInfo>
+        <TextInfo>{language || "Não informado"}</TextInfo>
+        <TextInfo>
+          <b>|</b>
+        </TextInfo>
+        <TextInfo>
+          {moment(created_at).locale("pt-br").format("DD/MM/YYYY")}
+        </TextInfo>
       </Row>
     </Container>
   );

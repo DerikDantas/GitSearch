@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import { colors } from "../assets/colors/colors";
 
 export const GloabalStyles = createGlobalStyle`
     *{
@@ -13,6 +14,11 @@ export const GloabalStyles = createGlobalStyle`
         width: 100%;
         height: 100%;
         overflow-x: hidden;
+    }
+
+    html {
+        height: 100%;
+        background-color: ${colors.background};
     }
 
     :focus-visible {

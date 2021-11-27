@@ -21,15 +21,15 @@ import {
 const Profile: React.FC = () => {
   const { dataUser, getRepositorys, listRepository } =
     useContext(GlobalContext);
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState<boolean>(false);
 
   return (
     <Container>
       <RowBox>
-        <BoxProfile className='scroll-1' style={{ width: open ? "25%" : "50%" }}>
+        <BoxProfile className="scroll-1" open={open}>
           <BackButton />
           <CloseButton
-            style={{ display: open ? "block" : "none" }}
+            open={open}
             onClick={() => {
               setOpen((prev) => !prev);
             }}
@@ -65,7 +65,7 @@ const Profile: React.FC = () => {
             Ver repositórios
           </Button>
         </BoxProfile>
-        <BoxRepositorys style={{ width: open ? "50%" : "0", padding: open ? '20px' : '0' }}>
+        <BoxRepositorys open={open}>
           <ContainerRepository className="scroll-1">
             {listRepository.map((item) => {
               return (

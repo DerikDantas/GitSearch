@@ -39,10 +39,10 @@ export const GlobalContext = createContext<IGlobalContextData>(
 );
 
 export const GlobalProvider: React.FC = ({ children }) => {
-  const [activePage, setActivePage] = useState("search");
-  const [error, setError] = useState("");
+  const [activePage, setActivePage] = useState<string>("search");
+  const [error, setError] = useState<string>("");
 
-  const [dataUser, setDataUser] = useState({
+  const [dataUser, setDataUser] = useState<ISelectUser>({
     id: "",
     name: "",
     bio: "",
@@ -53,17 +53,7 @@ export const GlobalProvider: React.FC = ({ children }) => {
     created_at: "",
     login: "",
   });
-  const [listRepository, setListRepository] = useState([
-    {
-      id: 0,
-      name: "",
-      description: "",
-      html_url: "",
-      language: "",
-      created_at: "",
-      visibility: "",
-    },
-  ]);
+  const [listRepository, setListRepository] = useState<IRepository[]>([]);
 
   async function searchUser(user: string): Promise<void> {
     carregando("");
