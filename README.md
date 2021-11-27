@@ -27,6 +27,8 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 ## 💻 Projeto
 Projeto desenvolvido em ReactJS, com o intuito de aplicar boas práticas Front-end, visando o Clean Code, UI/UX, estudo de TypeScript.
 
+- [Live demo (responsivo para mobile)](https://gitsearch-derik.netlify.app/)
+
 ## 🔧 Instalação
 Para executar o projeto em sua máquina/dispostivo, serão necessários os seguintes recursos instalados:
 
